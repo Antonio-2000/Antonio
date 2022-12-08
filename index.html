@@ -1,0 +1,21 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <body>
+  
+  <a href="/">Homepage</a>
+<HEAD>
+  <TITLE></TITLE>
+  <IfModule mod_rewrite.c> 
+    RewriteEngine On
+    
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ 
+    RewriteRule ^index\.html$ https://antonio-2000.github.io/Antonio/Html/Homepage.html [R=301,L]
+    RewriteCond %{THE_REQUEST} \.html 
+    RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+    </IfModule>
+  <LINK rel="Index" href="https://antonio-2000.github.io/Antonio/Html/Homepage.html">
+</HEAD>
+</body>
+</HTML>
